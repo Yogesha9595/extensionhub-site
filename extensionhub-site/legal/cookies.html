@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cookie Policy — ExtensionHub</title>
+  <meta name="description" content="Cookie Policy for ExtensionHub." />
+  <link rel="canonical" href="https://extensionhub.in/legal/cookies.html" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/app.css" />
+</head>
+<body class="min-h-screen">
+  <div id="appHeader"></div>
+
+  <main class="mx-auto max-w-4xl px-4 py-10">
+    <section class="glass p-8">
+      <div class="badge inline-flex">Legal</div>
+      <h1 class="mt-4 text-4xl font-bold">Cookie Policy</h1>
+      <p class="mt-2 text-xs" style="color:var(--muted)">Last updated: 2026-01-19</p>
+
+      <div class="mt-8 space-y-6 text-sm" style="color:var(--muted)">
+        <p>
+          Cookies are small files stored on your device. We use cookies for essential functionality and may use them for advertising if enabled.
+        </p>
+
+        <div class="card p-6">
+          <h2 class="text-lg font-semibold" style="color:var(--text)">Essential cookies</h2>
+          <p class="mt-2">
+            Used for core site functionality and preferences (for example, theme preference).
+          </p>
+        </div>
+
+        <div class="card p-6">
+          <h2 class="text-lg font-semibold" style="color:var(--text)">Advertising cookies</h2>
+          <p class="mt-2">
+            If AdSense is enabled, Google and partners may use cookies to serve relevant ads. You can manage ad personalization in your Google account settings.
+          </p>
+        </div>
+
+        <div class="card p-6">
+          <h2 class="text-lg font-semibold" style="color:var(--text)">Contact</h2>
+          <p class="mt-2">
+            Support: <a class="underline" href="mailto:support@extensionhub.in">support@extensionhub.in</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="appFooter"></div>
+  <script type="module">
+    import { SITE } from "/data/data.js";
+    import { headerHTML, footerHTML, bindUIActions } from "/assets/js/ui.js";
+    document.getElementById("appHeader").innerHTML = headerHTML(SITE);
+    document.getElementById("appFooter").innerHTML = footerHTML(SITE);
+    bindUIActions();
+  </script>
+</body>
+</html>

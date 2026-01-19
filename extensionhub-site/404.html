@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Page not found — ExtensionHub</title>
+  <meta name="description" content="The page you are looking for does not exist on ExtensionHub." />
+  <meta name="robots" content="noindex" />
+  <link rel="canonical" href="https://extensionhub.in/404.html" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/app.css" />
+</head>
+<body class="min-h-screen">
+  <div id="appHeader"></div>
+
+  <main class="mx-auto max-w-4xl px-4 py-16">
+    <section class="glass p-10 text-center">
+      <div class="badge inline-flex">404</div>
+      <h1 class="mt-4 text-4xl font-bold">Page not found</h1>
+      <p class="mt-3 text-sm" style="color:var(--muted)">
+        The link may be broken or the page may have moved.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-2 justify-center">
+        <a class="btn-primary" href="/">Go home</a>
+        <a class="btn" href="/#extensions">Browse extensions</a>
+        <a class="btn" href="/support/contact.html">Contact support</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="appFooter"></div>
+
+  <script type="module">
+    import { SITE } from "/data/data.js";
+    import { headerHTML, footerHTML, bindUIActions } from "/assets/js/ui.js";
+    document.getElementById("appHeader").innerHTML = headerHTML(SITE);
+    document.getElementById("appFooter").innerHTML = footerHTML(SITE);
+    bindUIActions();
+  </script>
+</body>
+</html>

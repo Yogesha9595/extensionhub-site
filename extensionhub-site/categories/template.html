@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Category — ExtensionHub</title>
+  <meta name="description" content="Browse extensions by category on ExtensionHub." />
+  <link rel="canonical" href="https://extensionhub.in/categories/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Category — ExtensionHub" />
+  <meta property="og:description" content="Browse extensions by category on ExtensionHub." />
+  <meta property="og:image" content="https://extensionhub.in/assets/img/brand/og-default.png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/app.css" />
+</head>
+
+<body class="min-h-screen" data-category="Privacy">
+  <div id="appHeader"></div>
+
+  <main class="mx-auto max-w-6xl px-4 py-10">
+    <section class="glass p-8">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+        <div>
+          <h1 id="catTitle" class="text-3xl font-bold">Category</h1>
+          <p id="catDesc" class="mt-2 text-sm" style="color:var(--muted)"></p>
+        </div>
+        <a class="btn" href="/#extensions">Back to marketplace</a>
+      </div>
+
+      <div id="catGrid" class="mt-8 grid gap-5 md:grid-cols-2"></div>
+
+      <div class="mt-10 card p-6">
+        <h2 class="text-lg font-semibold">Explore more</h2>
+        <p class="mt-2 text-sm" style="color:var(--muted)">
+          Visit <a class="underline" href="/#extensions">all extensions</a> or read the
+          <a class="underline" href="/blog/">blog</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <div id="appFooter"></div>
+
+  <script type="module">
+    import { SITE, EXTENSIONS } from "/data/data.js";
+    import { headerHTML, footerHTML, bindUIActions } from "/assets/js/ui.js";
+    import { renderCategoryPage } from "/assets/js/category-page.js";
+
+    document.getElementById("appHeader").innerHTML = headerHTML(SITE);
+    document.getElementById("appFooter").innerHTML = footerHTML(SITE);
+    bindUIActions();
+
+    const category = document.body.getAttribute("data-category") || "All";
+    renderCategoryPage({ category, site: SITE, extensions: EXTENSIONS });
+  </script>
+</body>
+</html>

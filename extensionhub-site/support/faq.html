@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FAQ — ExtensionHub</title>
+  <meta name="description" content="Frequently asked questions about ExtensionHub extensions, payments, refunds, and privacy." />
+  <link rel="canonical" href="https://extensionhub.in/support/faq.html" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/app.css" />
+</head>
+<body class="min-h-screen">
+  <div id="appHeader"></div>
+
+  <main class="mx-auto max-w-4xl px-4 py-10">
+    <section class="glass p-8">
+      <div class="badge inline-flex">FAQ</div>
+      <h1 class="mt-4 text-4xl font-bold">Frequently asked questions</h1>
+
+      <div class="mt-8 space-y-3">
+        <details class="card p-4">
+          <summary class="cursor-pointer font-semibold">How do I install an extension?</summary>
+          <div class="mt-2 text-sm" style="color:var(--muted)">
+            Open the extension page and click “Install” to go to the official store listing (or provider link).
+          </div>
+        </details>
+
+        <details class="card p-4">
+          <summary class="cursor-pointer font-semibold">Do extensions collect my browsing data?</summary>
+          <div class="mt-2 text-sm" style="color:var(--muted)">
+            We aim for privacy-first tools. Each extension page includes a “Why you can trust this extension” section.
+            Always review permissions and policies before installing.
+          </div>
+        </details>
+
+        <details class="card p-4">
+          <summary class="cursor-pointer font-semibold">Where can I request a refund?</summary>
+          <div class="mt-2 text-sm" style="color:var(--muted)">
+            Review our <a class="underline" href="/legal/refunds.html">Refund Policy</a>, then email
+            <a class="underline" href="mailto:billing@extensionhub.in">billing@extensionhub.in</a>
+            with your purchase details.
+          </div>
+        </details>
+
+        <details class="card p-4">
+          <summary class="cursor-pointer font-semibold">How do I contact support?</summary>
+          <div class="mt-2 text-sm" style="color:var(--muted)">
+            Email <a class="underline" href="mailto:support@extensionhub.in">support@extensionhub.in</a> or use
+            <a class="underline" href="/support/contact.html">Contact</a>.
+          </div>
+        </details>
+
+        <details class="card p-4">
+          <summary class="cursor-pointer font-semibold">Do you use affiliate links?</summary>
+          <div class="mt-2 text-sm" style="color:var(--muted)">
+            Sometimes, yes. Affiliate links never change the price you pay. We disclose this in the footer and on pages.
+          </div>
+        </details>
+      </div>
+
+      <div class="mt-10 flex flex-wrap gap-2">
+        <a class="btn" href="/support/">Back to support</a>
+        <a class="btn-primary" href="/#extensions">Browse extensions</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="appFooter"></div>
+
+  <script type="module">
+    import { SITE } from "/data/data.js";
+    import { headerHTML, footerHTML, bindUIActions } from "/assets/js/ui.js";
+    document.getElementById("appHeader").innerHTML = headerHTML(SITE);
+    document.getElementById("appFooter").innerHTML = footerHTML(SITE);
+    bindUIActions();
+  </script>
+</body>
+</html>
