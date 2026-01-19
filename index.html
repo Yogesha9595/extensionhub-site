@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ExtensionHub — Chrome extensions for privacy & productivity</title>
+  <meta name="description" content="ExtensionHub builds lightweight Chrome extensions focused on privacy and productivity." />
+  <style>
+    :root { --bg:#0b0f19; --card:#121a2a; --text:#eaf0ff; --muted:#b8c3e0; --line:#23314f; --accent:#6aa6ff; }
+    *{box-sizing:border-box} body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      background:radial-gradient(1200px 600px at 10% 0%, #16224a 0%, var(--bg) 55%) fixed; color:var(--text);}
+    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+    .wrap{max-width:980px;margin:0 auto;padding:28px 18px 60px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.2px}
+    .logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,#6aa6ff,#8df7d6); box-shadow:0 10px 30px rgba(106,166,255,.25)}
+    .pill{display:flex;gap:14px;flex-wrap:wrap}
+    .pill a{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(18,26,42,.55)}
+    .hero{margin-top:22px;display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    .card{background:rgba(18,26,42,.7);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+    h1{margin:0 0 10px;font-size:34px;line-height:1.15}
+    .sub{color:var(--muted);margin:0 0 16px;font-size:15px;line-height:1.6}
+    .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--text);font-weight:600}
+    .btn.primary{background:linear-gradient(135deg,#6aa6ff,#4e7dff);border-color:transparent}
+    .grid{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .mini{padding:14px;border-radius:16px;border:1px solid var(--line);background:rgba(18,26,42,.55)}
+    .mini h3{margin:0 0 6px;font-size:14px}
+    .mini p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}
+    .section{margin-top:18px}
+    .section h2{margin:0 0 10px;font-size:18px}
+    .list{margin:0;padding-left:18px;color:var(--muted);line-height:1.7}
+    .muted{color:var(--muted)}
+    .hr{height:1px;background:var(--line);margin:18px 0}
+    .footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:13px;margin-top:20px}
+    code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:8px;border:1px solid var(--line)}
+    @media (max-width:860px){ .hero{grid-template-columns:1fr} .grid{grid-template-columns:1fr} h1{font-size:30px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>ExtensionHub</div>
+      </div>
+      <div class="pill">
+        <a href="#extensions">Extensions</a>
+        <a href="#support">Support</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="card">
+        <h1>Chrome extensions built for privacy & productivity.</h1>
+        <p class="sub">
+          ExtensionHub publishes lightweight, value-driven browser tools. We focus on clean UX, strong performance,
+          and transparent policies.
+        </p>
+        <div class="btnrow">
+          <a class="btn primary" href="#extensions">View extensions</a>
+          <a class="btn" href="#support">Contact support</a>
+        </div>
+        <div class="hr"></div>
+        <p class="muted" style="margin:0">
+          Business contact: <a href="mailto:billing@extensionhub.in">billing@extensionhub.in</a> ·
+          Support: <a href="mailto:support@extensionhub.in">support@extensionhub.in</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <h2 style="margin:0 0 10px;font-size:18px">Quick info</h2>
+        <div class="grid" style="grid-template-columns:1fr;gap:10px;margin:0">
+          <div class="mini">
+            <h3>Billing</h3>
+            <p>Invoices, payments, and subscription issues: <a href="mailto:billing@extensionhub.in">billing@extensionhub.in</a></p>
+          </div>
+          <div class="mini">
+            <h3>Support</h3>
+            <p>App help & troubleshooting: <a href="mailto:support@extensionhub.in">support@extensionhub.in</a></p>
+          </div>
+          <div class="mini">
+            <h3>Response time</h3>
+            <p>Typically within <strong>24–48 hours</strong> on business days.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="extensions" class="section card">
+      <h2>Extensions</h2>
+      <p class="muted" style="margin-top:0">
+        Add your Chrome Web Store links here when ready.
+      </p>
+      <ul class="list">
+        <li><strong>Privacy Screen Guard</strong> — reduce shoulder-surfing and improve privacy (coming soon).</li>
+        <li><strong>ExtensionHub Tools</strong> — productivity utilities for creators and testers (coming soon).</li>
+      </ul>
+      <p class="muted" style="margin-bottom:0">
+        Want your link listed? Email <a href="mailto:help@extensionhub.in">help@extensionhub.in</a>.
+      </p>
+    </div>
+
+    <div id="support" class="section card">
+      <h2>Support & Contact</h2>
+      <ul class="list">
+        <li>Support: <a href="mailto:support@extensionhub.in">support@extensionhub.in</a></li>
+        <li>Billing: <a href="mailto:billing@extensionhub.in">billing@extensionhub.in</a></li>
+        <li>Help: <a href="mailto:help@extensionhub.in">help@extensionhub.in</a></li>
+      </ul>
+      <div class="hr"></div>
+      <h2>Refunds & Cancellations</h2>
+      <p class="muted">
+        If you purchase a subscription, you can cancel anytime. Refund eligibility depends on the product and purchase date.
+        For billing questions or refund requests, contact <a href="mailto:billing@extensionhub.in">billing@extensionhub.in</a>.
+      </p>
+      <p class="muted" style="margin-bottom:0">
+        Read our <a href="/terms.html">Terms</a> and <a href="/privacy.html">Privacy Policy</a>.
+      </p>
+    </div>
+
+    <div class="footer">
+      <div>© <span id="y"></span> ExtensionHub</div>
+      <div class="muted">Made in India · Secure payments via Stripe</div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+      </html>
